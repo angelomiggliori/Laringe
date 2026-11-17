@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111714">
+  <meta name="description" content="Uma experiência interativa de anatomia e fisiologia sobre a laringe e a produção da voz.">
+  <title>Laringe & Voz — Anatomia e Fisiologia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="barra-progresso" aria-hidden="true"><span id="progresso"></span></div>
+
+  <header class="topo">
+    <a class="marca" href="#inicio" aria-label="Voltar ao início">
+      <span class="marca-simbolo">V</span>
+      <span>LARINGE <i>&</i> VOZ</span>
+    </a>
+    <nav class="nav-principal" aria-label="Navegação principal">
+      <a href="#anatomia">Anatomia</a>
+      <a href="#fonacao">Fonação</a>
+      <a href="#alteracoes">Alterações</a>
+      <a href="#revisao">Revisão</a>
+    </nav>
+    <button class="botao botao-contorno botao-modo" id="alternar-modo" type="button">
+      <span aria-hidden="true">◉</span> Modo apresentação
+    </button>
+  </header>
+
+  <aside class="indice-lateral" aria-label="Progresso da leitura">
+    <a href="#inicio" class="ponto ativo" aria-label="Início" title="Início"></a>
+    <a href="#visao-geral" class="ponto" aria-label="Visão geral" title="Visão geral"></a>
+    <a href="#cartilagens" class="ponto" aria-label="Cartilagens" title="Cartilagens"></a>
+    <a href="#regioes" class="ponto" aria-label="Regiões" title="Regiões"></a>
+    <a href="#pregas" class="ponto" aria-label="Pregas vocais" title="Pregas vocais"></a>
+    <a href="#musculos" class="ponto" aria-label="Músculos" title="Músculos"></a>
+    <a href="#inervacao" class="ponto" aria-label="Inervação" title="Inervação"></a>
+    <a href="#fonacao" class="ponto" aria-label="Produção da voz" title="Produção da voz"></a>
+    <a href="#acustica" class="ponto" aria-label="Características da voz" title="Características da voz"></a>
+    <a href="#alteracoes" class="ponto" aria-label="Alterações" title="Alterações"></a>
+    <a href="#curiosidades" class="ponto" aria-label="Curiosidades" title="Curiosidades"></a>
+    <a href="#revisao" class="ponto" aria-label="Revisão" title="Revisão"></a>
+  </aside>
+
+  <main>
+    <section class="capa secao" id="inicio">
+      <div class="capa-texto">
+        <p class="sobretitulo"><span class="ponto-luz"></span> ANATOMIA & FISIOLOGIA HUMANA</p>
+        <h1>A voz não<br>nasce pronta.<br><em>Ela acontece.</em></h1>
+        <p class="capa-resumo">Uma jornada visual pela laringe: das cartilagens à vibração das pregas vocais, do ar que sai dos pulmões ao som que ganha forma e significado.</p>
+        <div class="capa-acoes">
+          <a class="botao botao-destaque" href="#visao-geral">Começar a explorar <span aria-hidden="true">↘</span></a>
+          <span class="tempo-leitura">LEITURA INTERATIVA · 10–15 MIN</span>
+        </div>
+        <div class="capa-numeros">
+          <div><strong>9</strong><span>cartilagens</span></div>
+          <div><strong>2</strong><span>pregas vocais</span></div>
+          <div><strong>1</strong><span>fonte sonora</span></div>
+        </div>
+      </div>
+      <div class="capa-arte">
+        <div class="anel anel-1"></div><div class="anel anel-2"></div>
+        <div class="selo-arte">A ANATOMIA<br>DO SOM</div>
+        <svg viewBox="0 0 460 570" role="img" aria-labelledby="titulo-capa descricao-capa">
+          <title id="titulo-capa">Ilustração esquemática da laringe</title>
+          <desc id="descricao-capa">Vista frontal estilizada da laringe com osso hioide, cartilagem tireóidea, cartilagem cricóidea e traqueia.</desc>
+          <defs>
+            <linearGradient id="cartilagem" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#efb27d"/><stop offset="1" stop-color="#a85f45"/></linearGradient>
+            <linearGradient id="traqueia" x1="0" x2="1"><stop stop-color="#8cae9a"/><stop offset="1" stop-color="#466b59"/></linearGradient>
+          </defs>
+          <path d="M145 90 Q230 58 315 90 L300 118 Q230 102 160 118Z" fill="none" stroke="#d8c6a9" stroke-width="9" stroke-linecap="round"/>
+          <path d="M175 128 Q230 105 285 128 L320 255 Q304 292 230 302 Q156 292 140 255Z" fill="url(#cartilagem)" opacity=".96" stroke="#f4c99c" stroke-width="4"/>
+          <path d="M178 148 L230 252 L282 148" fill="none" stroke="#714436" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M166 286 Q230 266 294 286 L287 328 Q230 346 173 328Z" fill="#d18a64" stroke="#f4c99c" stroke-width="4"/>
+          <path d="M184 338 L184 500 M276 338 L276 500" stroke="url(#traqueia)" stroke-width="19" stroke-linecap="round"/>
+          <g stroke="#b7d4c1" stroke-width="7" opacity=".85">
+            <path d="M178 365 Q230 378 282 365"/><path d="M178 395 Q230 408 282 395"/>
+            <path d="M178 425 Q230 438 282 425"/><path d="M178 455 Q230 468 282 455"/>
+            <path d="M178 485 Q230 498 282 485"/>
+          </g>
+          <path d="M230 84 Q214 50 230 22 Q246 50 230 84Z" fill="#e5a46f" stroke="#f5c69c" stroke-width="3"/>
+          <g fill="none" stroke="#d8c6a9" stroke-width="1.6">
+            <path d="M145 102 H58 L38 84"/><path d="M314 200 H390 L411 180"/>
+            <path d="M294 307 H392 L414 330"/><path d="M184 418 H65 L42 438"/>
+          </g>
+          <g fill="#f1e7d5" font-family="DM Sans, sans-serif" font-size="13">
+            <text x="24" y="72">Osso hioide</text>
+            <text x="320" y="164">Cartilagem</text><text x="320" y="181">tireóidea</text>
+            <text x="324" y="350">Cartilagem</text><text x="324" y="367">cricóidea</text>
+            <text x="24" y="458">Traqueia</text>
+          </g>
+        </svg>
+        <p class="legenda-arte">Representação didática — não está em escala anatômica.</p>
+      </div>
+      <div class="indicador-rolagem"><span></span> ROLE PARA CONTINUAR</div>
+    </section>
+
+    <section class="secao introducao" id="visao-geral">
+      <div class="cabecalho-secao revelar">
+        <p class="sobretitulo">01 / VISÃO GERAL</p>
+        <h2>O que é a <em>laringe?</em></h2>
+        <p class="texto-abertura">A laringe é um órgão musculocartilaginoso situado na região anterior do pescoço, entre a faringe e a traqueia. Ela integra o sistema respiratório e participa diretamente da produção vocal.</p>
+      </div>
+      <div class="grade-tres revelar">
+        <article class="cartao-funcao"><span class="numero-cartao">01</span><div class="icone-funcao">↗</div><h3>Respiração</h3><p>Permite a passagem do ar entre a faringe e a traqueia, ajustando a abertura da glote.</p></article>
+        <article class="cartao-funcao destaque-cartao"><span class="numero-cartao">02</span><div class="icone-funcao">〰</div><h3>Fonação</h3><p>Abriga as pregas vocais verdadeiras, que vibram com o fluxo de ar e geram a fonte sonora.</p></article>
+        <article class="cartao-funcao"><span class="numero-cartao">03</span><div class="icone-funcao">⬡</div><h3>Proteção</h3><p>Coordena mecanismos que ajudam a impedir a entrada de alimentos e líquidos nas vias aéreas.</p></article>
+      </div>
+      <div class="faixa-informativa revelar">
+        <span class="faixa-simbolo">i</span>
+        <p><strong>Localização:</strong> aproximadamente entre as vértebras cervicais C3 e C6 no adulto. Sua posição pode variar com a idade, a postura e os movimentos de deglutição.</p>
+      </div>
+      <div class="duas-colunas revelar">
+        <div>
+          <p class="rotulo">COMPOSIÇÃO</p>
+          <h3>Não é um osso.<br>É um conjunto articulado.</h3>
+          <p>A laringe é formada por cartilagens, articulações, músculos, ligamentos, membranas e mucosa. O osso hioide fica acima dela e serve de ponto de fixação para músculos relacionados aos seus movimentos.</p>
+        </div>
+        <div class="mini-dados">
+          <div><strong>3</strong><span>cartilagens ímpares</span></div>
+          <div><strong>3 pares</strong><span>de cartilagens</span></div>
+          <div><strong>C3–C6</strong><span>nível aproximado no adulto</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao-escura" id="cartilagens">
+      <div class="cabecalho-secao revelar">
+        <p class="sobretitulo">02 / ESTRUTURA</p>
+        <h2>Nove cartilagens.<br><em>Uma estrutura coordenada.</em></h2>
+        <p class="texto-abertura">A estrutura de sustentação da laringe é composta por três cartilagens ímpares e três pares. Algumas são predominantemente hialinas; outras, elásticas.</p>
+      </div>
+      <div class="cartilagens-layout revelar">
+        <div class="ilustracao-cartilagens">
+          <svg viewBox="0 0 440 430" role="img" aria-labelledby="tit-cart desc-cart">
+            <title id="tit-cart">Cartilagens principais da laringe</title>
+            <desc id="desc-cart">Esquema frontal com epiglote, cartilagem tireóidea, cartilagem cricóidea e traqueia.</desc>
+            <path d="M220 24 Q180 55 202 112 Q220 132 238 112 Q260 55 220 24Z" fill="#d99b6b" stroke="#f0c49a" stroke-width="3"/>
+            <path d="M139 126 Q220 88 301 126 L330 258 Q310 298 220 305 Q130 298 110 258Z" fill="#c77c59" stroke="#efb68b" stroke-width="4"/>
+            <path d="M160 148 L220 264 L280 148" fill="none" stroke="#704335" stroke-width="11" stroke-linejoin="round"/>
+            <path d="M148 306 Q220 282 292 306 L284 349 Q220 370 156 349Z" fill="#d99b6b" stroke="#f0c49a" stroke-width="4"/>
+            <path d="M179 361 V415 M261 361 V415" stroke="#789b86" stroke-width="18" stroke-linecap="round"/>
+            <g stroke="#b6d2bf" stroke-width="6"><path d="M173 376 Q220 388 267 376"/><path d="M173 400 Q220 412 267 400"/></g>
+            <g fill="none" stroke="#d8c5a9" stroke-width="1.5">
+              <path d="M202 65 H80 L55 48"/><path d="M298 198 H385 L407 180"/><path d="M288 329 H380 L406 350"/>
+            </g>
+            <g fill="#f3e8d7" font-family="DM Sans, sans-serif" font-size="13">
+              <text x="15" y="36">Epiglote</text><text x="326" y="164">Tireóidea</text>
+              <text x="325" y="370">Cricóidea</text>
+            </g>
+          </svg>
+          <span class="nota-ilustracao">Esquema simplificado de vista anterior.</span>
+        </div>
+        <div class="lista-cartilagens">
+          <div class="grupo-titulo"><span>ÍMPARES</span><b>03</b></div>
+          <article class="item-cartilagem"><span class="sigla">T</span><div><h3>Tireóidea</h3><p>É a maior. Suas lâminas formam a proeminência laríngea, conhecida como pomo de Adão, e ajudam a proteger as estruturas internas.</p><small>Predominantemente hialina</small></div></article>
+          <article class="item-cartilagem"><span class="sigla">C</span><div><h3>Cricóidea</h3><p>Tem formato de anel completo. Sustenta a laringe e faz a transição para a traqueia.</p><small>Hialina</small></div></article>
+          <article class="item-cartilagem"><span class="sigla">E</span><div><h3>Epiglote</h3><p>É elástica e participa da proteção da entrada da laringe durante a deglutição.</p><small>Elástica</small></div></article>
+          <div class="grupo-titulo grupo-par"><span>PARES</span><b>06</b></div>
+          <article class="item-cartilagem"><span class="sigla">A</span><div><h3>Aritenóideas <small>× 2</small></h3><p>Movimentam-se sobre a cricóidea e controlam a posição das pregas vocais.</p><small>Predominantemente hialinas</small></div></article>
+          <article class="item-cartilagem"><span class="sigla">C</span><div><h3>Corniculadas <small>× 2</small></h3><p>Pequenas cartilagens nos ápices das aritenóideas, associadas às pregas ariepiglóticas.</p><small>Elásticas</small></div></article>
+          <article class="item-cartilagem"><span class="sigla">C</span><div><h3>Cuneiformes <small>× 2</small></h3><p>Contribuem para a sustentação das pregas ariepiglóticas.</p><small>Elásticas</small></div></article>
+        </div>
+      </div>
+      <div class="chamada revel">
+        <strong>Guarde esta relação:</strong>
+        <span>Tireóidea protege · Cricóidea sustenta · Epiglote participa da proteção · Aritenóideas movimentam as pregas vocais.</span>
+      </div>
+    </section>
+
+    <section class="secao" id="regioes">
+      <div class="cabecalho-secao revelar">
+        <p class="sobretitulo">03 / ORGANIZAÇÃO INTERNA</p>
+        <h2>Três regiões.<br><em>Funções diferentes.</em></h2>
+        <p class="texto-abertura">Internamente, a laringe é dividida em supraglote, glote e subglote. A glote é a região diretamente relacionada à produção vocal.</p>
+      </div>
+      <div class="regioes-ilustracao revelar">
+        <svg viewBox="0 0 760 360" role="img" aria-labelledby="tit-reg desc-reg">
+          <title id="tit-reg">Divisões internas da laringe</title>
+          <desc id="desc-reg">Corte esquemático mostrando supraglote, glote e subglote em três faixas.</desc>
+          <path d="M260 30 Q380 -5 500 30 L470 130 Q380 155 290 130Z" fill="#d99b6b" opacity=".95"/>
+          <path d="M290 140 Q380 122 470 140 L455 205 Q380 225 305 205Z" fill="#d9c18c"/>
+          <path d="M305 215 Q380 236 455 215 L445 325 Q380 345 315 325Z" fill="#769985"/>
+          <path d="M330 165 Q380 185 430 165" stroke="#754a3b" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <path d="M330 185 Q380 165 430 185" stroke="#754a3b" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <g stroke="#e8d8c1" stroke-width="2" fill="none"><path d="M270 85 H95"/><path d="M460 172 H665"/><path d="M440 276 H665"/></g>
+          <g fill="#f3eadb" font-family="DM Sans, sans-serif" font-size="19" font-weight="700">
+            <text x="25" y="78">SUPRAGLOTE</text><text x="575" y="162">GLOTE</text><text x="575" y="267">SUBGLOTE</text>
+          </g>
+          <g fill="#d9c8b0" font-family="DM Sans, sans-serif" font-size="12">
+            <text x="25" y="101">Entrada e proteção</text><text x="575" y="185">Pregas vocais</text><text x="575" y="290">Condução do ar</text>
+          </g>
+        </svg>
+      </div>
+      <div class="grade-tres regioes-cards revelar">
+        <article class="regiao-card"><span class="tag-regiao">ACIMA</span><h3>Supraglote</h3><p>Inclui epiglote, pregas ariepiglóticas, pregas vestibulares e outras estruturas superiores. Participa da proteção das vias aéreas.</p></article>
+        <article class="regiao-card regiao-central"><span class="tag-regiao">CENTRO</span><h3>Glote</h3><p>Relaciona-se às pregas vocais verdadeiras e à rima da glote — o espaço entre elas. É central para a fonação.</p></article>
+        <article class="regiao-card"><span class="tag-regiao">ABAIXO</span><h3>Subglote</h3><p>Vai da região inferior das pregas vocais até a margem inferior da cartilagem cricóidea, continuando-se com a traqueia.</p></article>
+      </div>
+      <div class="faixa-informativa revelar"><span class="faixa-simbolo">!</span><p><strong>Importante:</strong> as pregas vestibulares são chamadas de falsas pregas vocais. Elas têm função protetora, mas não são as principais responsáveis pela voz habitual.</p></div>
+    </section>
+
+    <section class="secao secao-escura" id="pregas">
+      <div class="cabecalho-secao revelar">
+        <p class="sobretitulo">04 / A ESTRUTURA DA VOZ</p>
+        <h2>Pregas vocais:<br><em>cobertura, corpo e vibração.</em></h2>
+        <p class="texto-abertura">As pregas vocais verdadeiras são duas estruturas revestidas por mucosa, com tecido conjuntivo e músculo. Sua organização em camadas permite a vibração que dá origem à fonte sonora.</p>
+      </div>
+      <div class="comparacao-pregas revelar">
+        <div class="painel-prega">
+          <p class="rotulo">DURANTE A RESPIRAÇÃO</p>
+          <svg viewBox="0 0 320 210" role="img" aria-label="Pregas vocais afastadas durante a respiração">
+            <path d="M25 25 Q90 35 145 88 Q90 145 25 155Z" fill="#b9755a" opacity=".95"/>
+            <path d="M295 25 Q230 35 175 88 Q230 145 295 155Z" fill="#b9755a" opacity=".95"/>
+            <path d="M25 25 Q90 35 145 88 Q90 145 25 155Z" fill="none" stroke="#f1bd9a" stroke-width="4"/>
+            <path d="M295 25 Q230 35 175 88 Q230 145 295 155Z" fill="none" stroke="#f1bd9a" stroke-width="4"/>
+            <path d="M160 65 V145" stroke="#9dc5aa" stroke-width="5" stroke-linecap="round" stroke-dasharray="7 8"/>
+            <path d="M148 75 L160 58 L172 75" stroke="#9dc5aa" stroke-width="3" fill="none"/>
+            <text x="160" y="190" text-anchor="middle" fill="#d7c9b5" font-size="12">Glote aberta</text>
+          </svg>
+          <p>As pregas vocais ficam afastadas para permitir a passagem do ar.</p>
+        </div>
+        <div class="painel-prega">
+          <p class="rotulo">DURANTE A FONAÇÃO</p>
+          <svg viewBox="0 0 320 210" role="img" aria-label="Pregas vocais aproximadas durante a fonação">
+            <path d="M25 25 Q100 35 157 98 Q100 145 25 155Z" fill="#b9755a" stroke="#f1bd9a" stroke-width="4"/>
+            <path d="M295 25 Q220 35 163 98 Q220 145 295 155Z" fill="#b9755a" stroke="#f1bd9a" stroke-width="4"/>
+            <path d="M160 60 V137" stroke="#e6ad75" stroke-width="3" stroke-dasharray="4 6"/>
+            <path d="M144 82 Q160 64 176 82 M144 116 Q160 134 176 116" stroke="#e6ad75" stroke-width="3" fill="none"/>
+            <text x="160" y="190" text-anchor="middle" fill="#d7c9b5" font-size="12">Pregas aproximadas e vibrando</text>
+          </svg>
+          <p>O ar expiratório atravessa a glote e as pregas vocais entram em vibração.</p>
+        </div>
+      </div>
+      <div class="camadas-layout revelar">
+        <div class="camadas-desenho">
+          <svg viewBox="0 0 460 330" role="img" aria-labelledby="tit-cam desc-cam">
+            <title id="tit-cam">Camadas de uma prega vocal</title>
+            <desc id="desc-cam">Corte didático com epitélio, lâmina própria superficial, intermediária, profunda e músculo vocal.</desc>
+            <path d="M40 68 Q230 18 420 68 L420 95 Q230 48 40 95Z" fill="#e7b48c"/>
+            <path d="M40 95 Q230 48 420 95 L420 142 Q230 100 40 142Z" fill="#c98b72"/>
+            <path d="M40 142 Q230 100 420 142 L420 184 Q230 151 40 184Z" fill="#a96e5d"/>
+            <path d="M40 184 Q230 151 420 184 L420 280 Q230 326 40 280Z" fill="#6e8d78"/>
+            <g stroke="#f8e6d2" stroke-width="1.5" fill="none"><path d="M420 80 H445"/><path d="M420 118 H445"/><path d="M420 162 H445"/><path d="M420 230 H445"/></g>
+            <g fill="#f4e9da" font-family="DM Sans, sans-serif" font-size="12">
+              <text x="12" y="46">Superfície</text><text x="12" y="62">vibratória</text>
+              <text x="250" y="38">Epitélio</text><text x="250" y="115">Lâmina própria</text>
+              <text x="250" y="132">superficial</text><text x="250" y="170">Camada de transição</text>
+              <text x="250" y="250">Músculo vocal</text>
+            </g>
+            <g fill="#f4e9da" font-family="DM Sans, sans-serif" font-size="10">
+              <text x="270" y="148">intermediária + profunda</text>
+            </g>
+          </svg>
+          <span class="nota-ilustracao">Esquema didático das camadas — proporções não representativas.</span>
+        </div>
+        <div class="camadas-texto">
+          <p class="rotulo">MODELO CORPO–COBERTURA</p>
+          <h3>Camadas que trabalham em conjunto.</h3>
+          <ul class="lista-camadas">
+            <li><b>Epitélio</b><span>Revestimento superficial resistente ao atrito.</span></li>
+            <li><b>Lâmina própria superficial</b><span>Também chamada de espaço de Reinke; permite o deslocamento da mucosa.</span></li>
+            <li><b>Lâmina própria intermediária</b><span>Rica em fibras elásticas.</span></li>
+            <li><b>Lâmina própria profunda</b><span>Rica em fibras colágenas; junto à intermediária forma o ligamento vocal.</span></li>
+            <li><b>Músculo vocal</b><span>Participa dos ajustes finos de tensão e espessura.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="faixa-informativa faixa-escura revelar"><span class="faixa-simbolo">↗</span><p><strong>Espaço de Reinke:</strong> o acúmulo de líquido nessa camada superficial pode causar edema de Reinke, aumentando a massa das pregas vocais e deixando a voz mais grave e rouca.</p></div>
+    </section>
+
+    <section class="secao" id="musculos">
+      <div class="cabecalho-secao revelar">
+        <p class="sobretitulo">05 / CONTROLE DO MOVIMENTO</p>
+        <h2>Músculos que abrem,<br><em>fecham e ajustam.</em></h2>
+        <p class="texto-abertura">Os músculos intrínsecos controlam diretamente a posição e a tensão das pregas vocais. Os extrínsecos movimentam e estabilizam a laringe como um conjunto.</p>
+      </div>
+      <div class="musculos-principais revelar">
+        <article class="musculo-card"><span class="acao-musculo">ABRE A GLOTE</span><h3>Cricoaritenóideo posterior</h3><p>Promove a abdução das pregas vocais. É o único músculo intrínseco que abre diretamente a glote.</p><span class="simbolo-musculo">↔</span></article>
+        <article class="musculo-card"><span class="acao-musculo">FECHA A GLOTE</span><h3>Cricoaritenóideo lateral</h3><p>Promove a adução das pregas vocais, aproximando-as durante a fonação.</p><span class="simbolo-musculo">⇢⇠</span></article>
+        <article class="musculo-card"><span class="acao-musculo">AUMENTA A TENSÃO</span><h3>Cricotireóideo</h3><p>Alongamento e tensionamento das pregas vocais; participa da produção de frequências mais altas.</p><span class="simbolo-musculo">↗</span></article>
+        <article class="musculo-card"><span class="acao-musculo">AJUSTE FINO</span><h3>Tireoaritenóideo</h3><p>Participa do ajuste de comprimento, espessura e tensão. Sua porção medial corresponde ao músculo vocal.</p><span class="simbolo-musculo">〰</span></article>
+      </div>
+      <div class="duas-colunas extrinsecos revelar">
+        <div><p class="rotulo">MÚSCULOS EXTRÍNSECOS</p><h3>Movem a laringe<br>como um conjunto.</h3><p>Os supra-hióideos — como digástrico, estilo-hióideo, milo-hióideo e gênio-hióideo — participam da elevação do complexo hio-laríngeo. Os infra-hióideos ajudam na estabilização e nos movimentos de descida.</p></div>
+        <div class="nota-muscular"><span>PARA MEMORIZAR</span><strong>Posterior abre.<br>Lateral fecha.<br>Cricotireóideo tensiona.</strong></div>
+      </div>
+    </section>
+
+    <section class="secao secao-escura" id="inervacao">
+      <div class="cabecalho-secao revelar">
+        <p class="sobretitulo">06 / COMANDO NERVOSO</p>
+        <h2>A voz também depende<br><em>dos nervos.</em></h2>
+        <p class="texto-abertura">A inervação da laringe vem principalmente do nervo vago, o décimo par craniano. Dois ramos são essenciais para compreender a função vocal.</p>
+      </div>
+      <div class="nervos-layout revelar">
+        <div class="nervo-card">
+          <span class="nervo-numero">01</span><p class="rotulo">RAMO DO NERVO VAGO</p><h3>Nervo laríngeo superior</h3>
+          <div class="ramo-nervo"><b>Ramo interno</b><span>Sensibilidade predominante da região supraglótica; participa dos reflexos de proteção.</span></div>
+          <div class="ramo-nervo"><b>Ramo externo</b><span>Inerva o músculo cricotireóideo, importante para ajustar a tensão das pregas vocais.</span></div>
+        </div>
+        <div class="nervo-card nervo-destaque">
+          <span class="nervo-numero">02</span><p class="rotulo">RAMO DO NERVO VAGO</p><h3>Nervo laríngeo recorrente</h3>
+          <div class="ramo-nervo"><b>Função motora</b><span>Inerva praticamente todos os músculos intrínsecos da laringe, exceto o cricotireóideo.</span></div>
+          <div class="ramo-nervo"><b>Função sensitiva</b><span>Fornece sensibilidade à mucosa abaixo das pregas vocais.</span></div>
+        </div>
+      </div>
+      <div class="curiosidade-nervo revelar"><span class="curiosidade-icone">↶</span><p><strong>Trajeto surpreendente:</strong> o nervo laríngeo recorrente esquerdo desce ao tórax, contorna o arco da aorta e retorna em direção ao pescoço. O direito contorna a artéria subclávia direita.</p></div>
+      <div class="faixa-informativa faixa-escura revelar"><span class="faixa-simbolo">!</span><p>Uma lesão nervosa pode causar paresia ou paralisia de prega vocal, rouquidão, voz soprosa e, em alguns casos, dificuldade respiratória ou de proteção durante a deglutição.</p></div>
+    </section>
+
+    <section class="secao" id="fonacao">
+      <div class="cabecalho-secao revelar">
+        <p class="sobretitulo">07 / O FENÔMENO CENTRAL</p>
+        <h2>Como o ar se transforma<br><em>em voz?</em></h2>
+        <p class="texto-abertura">A fonação é resultado da integração entre respiração, atividade muscular, vibração das pregas vocais e propriedades acústicas do trato vocal.</p>
+      </div>
+      <div class="fluxo-voz revelar">
+        <div class="etapa-voz"><span>01</span><div class="etapa-icone">◉</div><h3>Pulmões</h3><p>Fornecem o fluxo de ar expiratório, que é a energia da produção vocal.</p></div>
+        <div class="seta-fluxo">→</div>
+        <div class="etapa-voz"><span>02</span><div class="etapa-icone">║</div><h3>Traqueia</h3><p>Conduz o ar até a laringe.</p></div>
+        <div class="seta-fluxo">→</div>
+        <div class="etapa-voz etapa-foco"><span>03</span><div class="etapa-icone">〰</div><h3>Pregas vocais</h3><p>Com a aproximação e a passagem do ar, entram em vibração e geram o som laríngeo.</p></div>
+        <div class="seta-fluxo">→</div>
+        <div class="etapa-voz"><span>04</span><div class="etapa-icone">◌</div><h3>Trato vocal</h3><p>Faringe e cavidades oral e nasal modificam e ressoam o som.</p></div>
+        <div class="seta-fluxo">→</div>
+        <div class="etapa-voz"><span>05</span><div class="etapa-icone">Aa</div><h3>Articulação</h3><p>Língua, lábios, dentes e mandíbula ajudam a formar os sons da fala.</p></div>
+      </div>
+      <div class="mecanismo revelar">
+        <div class="mecanismo-texto"><p class="rotulo">MECANISMO MIOELÁSTICO-AERODINÂMICO</p><h3>O que faz as pregas vocais vibrarem?</h3><p>A musculatura posiciona as pregas vocais. O ar expirado aumenta a pressão abaixo delas — a pressão subglótica. Quando essa pressão supera a resistência glótica, o ar passa. A elasticidade dos tecidos e as forças aerodinâmicas sustentam a oscilação.</p><p>O efeito Bernoulli pode contribuir para a aproximação das pregas, mas não explica sozinho a vibração vocal.</p></div>
+        <div class="mecanismo-destaque"><span>PRESSÃO DO AR</span><b>+</b><span>ELASTICIDADE DOS TECIDOS</span><b>+</b><span>AJUSTE MUSCULAR</span><i>↓</i><strong>VIBRAÇÃO<br>VOCAL</strong></div>
+      </div>
+      <div class="onda-mucosa revelar">
+        <div class="onda-titulo"><p class="rotulo">BIOMECÂNICA</p><h3>A onda mucosa</h3><p>A mucosa que recobre as pregas vocais realiza um movimento ondulatório durante a vibração. Alterações nessa onda podem indicar rigidez, cicatrizes ou lesões.</p></div>
+        <svg viewBox="0 0 560 190" role="img" aria-label="Representação esquemática da onda mucosa">
+          <path d="M20 98 C65 18 105 18 150 98 S235 178 280 98 S365 18 410 98 S495 178 540 98" fill="none" stroke="#d18b61" stroke-width="7" stroke-linecap="round"/>
+          <path d="M20 122 C65 42 105 42 150 122 S235 202 280 122 S365 42 410 122 S495 202 540 122" fill="none" stroke="#86a992" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+          <g fill="#d8c8b2" font-family="DM Sans, sans-serif" font-size="12"><text x="20" y="20">Movimento ondulatório da cobertura</text></g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="secao secao-escura" id="acustica">
+      <div class="cabecalho-secao revelar">
+        <p class="sobretitulo">08 / CARACTERÍSTICAS ACÚSTICAS</p>
+        <h2>O que diferencia<br><em>uma voz da outra?</em></h2>
+        <p class="texto-abertura">A voz pode ser descrita por parâmetros físicos e perceptivos. Os três conceitos fundamentais para a apresentação são frequência, intensidade e timbre.</p>
+      </div>
+      <div class="grade-tres acustica-cards revelar">
+        <article><div class="visual-frequencia"><span>〰</span><span>∿</span><span>∿∿</span></div><h3>Frequência fundamental</h3><p>É a frequência de repetição dos ciclos vibratórios. Está relacionada à percepção de altura: voz mais grave ou mais aguda.</p><small>MEDIDA EM HERTZ (Hz)</small></article>
+        <article><div class="visual-intensidade"><span>·</span><span>●</span><span>⬤</span></div><h3>Intensidade</h3><p>Relaciona-se à amplitude e à energia sonora percebida. Pode variar com o fluxo de ar e o ajuste glótico.</p><small>MEDIDA EM DECIBÉIS (dB)</small></article>
+        <article><div class="visual-timbre"><span>A</span><span>E</span><span>O</span></div><h3>Timbre</h3><p>É o conjunto de características que permite distinguir vozes mesmo quando têm altura e intensidade semelhantes.</p><small>DEPENDE DO ESPECTRO E DA RESSONÂNCIA</small></article>
+      </div>
+      <div class="duas-colunas formantes revelar">
+        <div><p class="rotulo">RESSONÂNCIA</p><h3>O trato vocal molda o som.</h3><p>Faringe, boca e cavidade nasal modificam o espectro do som produzido na laringe. As regiões de ressonância são chamadas de formantes e ajudam a diferenciar as vogais.</p></div>
+        <div class="formantes-caixa"><span>F1</span><span>F2</span><span>F3</span><span>F4</span><small>REGIÕES DE RESSONÂNCIA DO TRATO VOCAL</small></div>
+      </div>
+      <div class="faixa-informativa faixa-escura revelar"><span class="faixa-simbolo">♪</span><p><strong>Extensão vocal</strong> é o conjunto de notas que alguém consegue produzir. <strong>Tessitura</strong> é a região em que a pessoa canta com maior conforto e estabilidade. Não são a mesma coisa.</p></div>
+    </section>
+
+    <section class="secao" id="alteracoes">
+      <div class="cabecalho-secao revelar">
+        <p class="sobretitulo">09 / SAÚDE VOCAL</p>
+        <h2>Quando a estrutura<br><em>não funciona bem.</em></h2>
+        <p class="texto-abertura">Alterações inflamatórias, estruturais, neurológicas e funcionais podem comprometer a voz, a respiração e a proteção das vias aéreas.</p>
+      </div>
+      <div class="lista-alteracoes revelar">
+        <article class="alteracao"><span class="alteracao-num">01</span><div><h3>Laringite</h3><p>Inflamação da mucosa laríngea. Pode causar rouquidão, tosse, irritação e fadiga vocal.</p></div><span class="tipo-alteracao">INFLAMATÓRIA</span></article>
+        <article class="alteracao"><span class="alteracao-num">02</span><div><h3>Nódulos vocais</h3><p>Lesões geralmente bilaterais, frequentemente associadas ao fonotrauma e ao esforço vocal repetido.</p></div><span class="tipo-alteracao">ESTRUTURAL</span></article>
+        <article class="alteracao"><span class="alteracao-num">03</span><div><h3>Pólipos vocais</h3><p>Lesões geralmente unilaterais, que podem provocar rouquidão, aspereza e dificuldade vocal.</p></div><span class="tipo-alteracao">ESTRUTURAL</span></article>
+        <article class="alteracao"><span class="alteracao-num">04</span><div><h3>Edema de Reinke</h3><p>Acúmulo de líquido na camada superficial da prega vocal, frequentemente associado ao tabagismo. Pode deixar a voz mais grave.</p></div><span class="tipo-alteracao">ESTRUTURAL</span></article>
+        <article class="alteracao"><span class="alteracao-num">05</span><div><h3>Paralisia de prega vocal</h3><p>Comprometimento neuromotor que pode causar voz soprosa, rouquidão, tosse ineficiente e alterações respiratórias.</p></div><span class="tipo-alteracao">NEUROLÓGICA</span></article>
+        <article class="alteracao"><span class="alteracao-num">06</span><div><h3>Disfonia</h3><p>Alteração da qualidade, frequência, intensidade ou estabilidade da voz. É um sinal ou sintoma, não uma doença única.</p></div><span class="tipo-alteracao">FUNCIONAL / ORGÂNICA</span></article>
+      </div>
+      <div class="alerta-clinico revelar"><span>!</span><p><strong>Atenção:</strong> rouquidão persistente, especialmente quando acompanhada de dificuldade para respirar ou engolir, dor importante ou sangue na tosse, precisa de avaliação profissional. Trauma no pescoço com dificuldade respiratória é uma emergência.</p></div>
+      <div class="duas-colunas revelar">
+        <div><p class="rotulo">TRAUMAS E LESÕES</p><h3>A cartilagem também pode sofrer fraturas.</h3><p>Traumas cervicais podem causar fraturas da cartilagem tireóidea ou cricóidea, deslocamento das aritenóideas e lesões das pregas vocais, incluindo hemorragias. A cricóidea merece atenção por formar um anel completo ao redor da via aérea.</p></div>
+        <div><p class="rotulo">VARIAÇÕES ANATÔMICAS</p><h3>Nem toda diferença é doença.</h3><p>Dimensões da laringe, ângulo da cartilagem tireóidea, comprimento das pregas vocais e posição laríngea variam entre indivíduos. Pequenas assimetrias podem existir sem representar necessariamente uma alteração patológica.</p></div>
+      </div>
+    </section>
+
+    <section class="secao secao-escura" id="curiosidades">
+      <div class="cabecalho-secao revelar">
+        <p class="sobretitulo">10 / PARA SURPREENDER</p>
+        <h2>Pequenos detalhes,<br><em>grandes descobertas.</em></h2>
+        <p class="texto-abertura">Use estas curiosidades para enriquecer a apresentação e mostrar que você compreendeu a relação entre anatomia e função.</p>
+      </div>
+      <div class="curiosidades-grade revelar">
+        <article><span>01</span><h3>Não são cordas.</h3><p>As pregas vocais são estruturas formadas por mucosa, tecido conjuntivo, ligamento e músculo.</p></article>
+        <article><span>02</span><h3>O ar é a energia.</h3><p>Sem fluxo de ar expiratório, não ocorre a fonação habitual.</p></article>
+        <article><span>03</span><h3>A laringe protege.</h3><p>O fechamento laríngeo ajuda a impedir que alimentos e líquidos cheguem aos pulmões.</p></article>
+        <article><span>04</span><h3>A voz muda na puberdade.</h3><p>O crescimento laríngeo e o alongamento das pregas vocais alteram a frequência vocal.</p></article>
+        <article><span>05</span><h3>O nervo faz uma volta.</h3><p>O nervo laríngeo recorrente esquerdo contorna o arco da aorta antes de retornar ao pescoço.</p></article>
+        <article><span>06</span><h3>A voz é um trabalho em equipe.</h3><p>Pulmões, laringe, faringe, boca, língua, lábios e sistema nervoso atuam em conjunto.</p></article>
+      </div>
+      <div class="exames reveler revelar">
+        <p class="rotulo">COMO A LARINGE É AVALIADA?</p>
+        <div class="exames-lista">
+          <div><b>Nasofibrolaringoscopia</b><span>Visualiza as estruturas e seus movimentos.</span></div>
+          <div><b>Videolaringoestroboscopia</b><span>Analisa o padrão vibratório e a onda mucosa.</span></div>
+          <div><b>Eletromiografia laríngea</b><span>Avalia a atividade elétrica dos músculos.</span></div>
+          <div><b>Tomografia e ressonância</b><span>Estudam estruturas, tecidos e possíveis lesões.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao demonstracao" id="demonstracao">
+      <div class="cabecalho-secao revelar">
+        <p class="sobretitulo">11 / DEMONSTRAÇÃO AO VIVO</p>
+        <h2>Do silêncio<br><em>à voz.</em></h2>
+        <p class="texto-abertura">Uma demonstração simples ajuda a turma a ouvir e compreender o que acontece dentro da laringe.</p>
+      </div>
+      <div class="passos-demo revelar">
+        <article><span>01</span><h3>Respire</h3><p>Inspire e expire silenciosamente. Explique que as pregas vocais ficam afastadas para a passagem do ar.</p></article>
+        <article><span>02</span><h3>Emita um som</h3><p>Faça um “AAAAA” sustentado. Explique que as pregas vocais se aproximam e vibram.</p></article>
+        <article><span>03</span><h3>Mude a altura</h3><p>Faça um som grave e depois um agudo. Explique os ajustes de tensão e de vibração.</p></article>
+        <article><span>04</span><h3>Cante uma frase</h3><p>Mostre como ressonância e articulação transformam a fonte sonora em uma emissão reconhecível.</p></article>
+      </div>
+      <div class="frase-final revelar">A laringe produz a fonte sonora.<br><em>O trato vocal dá forma à voz.</em></div>
+    </section>
+
+    <section class="secao revisao" id="revisao">
+      <div class="cabecalho-secao revelar">
+        <p class="sobretitulo">12 / FIXAÇÃO DO CONTEÚDO</p>
+        <h2>O que ficou<br><em>na sua voz?</em></h2>
+        <p class="texto-abertura">Teste seus conhecimentos com cinco perguntas rápidas. Ao final, confira as respostas e revise o que precisar.</p>
+      </div>
+      <div class="quiz revelar" id="quiz">
+        <div class="quiz-topo"><span>DESAFIO DE REVISÃO</span><span id="contador-quiz">01 / 05</span></div>
+        <div class="quiz-progresso"><span id="quiz-progresso"></span></div>
+        <div id="pergunta-area">
+          <h3 id="pergunta-texto">Quantas cartilagens formam a laringe?</h3>
+          <div id="opcoes" class="opcoes"></div>
+          <div id="explicacao" class="explicacao" hidden></div>
+          <button class="botao botao-destaque" id="proxima-pergunta" type="button" disabled>Responder</button>
+        </div>
+        <div id="resultado-quiz" hidden></div>
+      </div>
+    </section>
+
+    <section class="secao encerramento">
+      <div class="encerramento-miolo">
+        <p class="sobretitulo">FIM DA JORNADA · INÍCIO DA COMPREENSÃO</p>
+        <h2>A voz é movimento,<br>ar e <em>anatomia.</em></h2>
+        <p>Compreender a laringe é entender como uma estrutura pequena e altamente especializada participa de funções essenciais: respirar, proteger e comunicar.</p>
+        <a class="botao botao-destaque" href="#inicio">Voltar ao início ↑</a>
+      </div>
+      <div class="referencias">
+        <p class="rotulo">REFERÊNCIAS PARA APROFUNDAMENTO</p>
+        <p>MOORE, K. L.; DALLEY, A. F.; AGUR, A. M. R. <i>Anatomia Orientada para a Clínica.</i> · STANDRING, S. <i>Gray’s Anatomy.</i> · GUYTON, A. C.; HALL, J. E. <i>Tratado de Fisiologia Médica.</i> · TITZE, I. R. <i>Principles of Voice Production.</i></p>
+        <small>Material didático de apoio. As ilustrações são esquemáticas e não substituem atlas anatômicos ou avaliação profissional.</small>
+      </div>
+    </section>
+
+    <section class="secao qr-secao" id="qr">
+      <div class="qr-texto">
+        <p class="sobretitulo">COMPARTILHE O CONTEÚDO</p>
+        <h2>Uma leitura.<br><em>Um QR Code.</em></h2>
+        <p>Depois de publicar este projeto no GitHub Pages, o endereço desta página pode ser transformado em um QR Code para a turma abrir o material no próprio celular.</p>
+        <label for="url-publica">Endereço público da página</label>
+        <div class="campo-url"><input id="url-publica" type="url" placeholder="https://seu-usuario.github.io/laringe-e-voz/"><button id="gerar-qr" type="button">Gerar</button></div>
+        <p class="ajuda-url">Se a página já estiver publicada, o endereço atual será preenchido automaticamente.</p>
+        <button class="botao botao-contorno" id="copiar-endereco" type="button">Copiar endereço</button>
+      </div>
+      <div class="qr-cartao">
+        <div id="qr-imagem" aria-label="Área do QR Code"><span class="qr-placeholder">QR<br>CODE</span></div>
+        <strong>APONTE A CÂMERA</strong>
+        <small>Abra o conteúdo interativo no celular.</small>
+        <button id="baixar-qr" type="button" disabled>Baixar QR Code</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <a class="marca" href="#inicio"><span class="marca-simbolo">V</span><span>LARINGE <i>&</i> VOZ</span></a>
+    <span>ANATOMIA E FISIOLOGIA HUMANA · MATERIAL DE ESTUDO</span>
+    <a href="#inicio">Voltar ao topo ↑</a>
+  </footer>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+</body>
+</html>
