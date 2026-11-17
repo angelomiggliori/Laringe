@@ -4,3 +4,584 @@
 @media(max-width:1000px){.secao{padding-left:7vw;padding-right:7vw}.indice-lateral{right:12px}.capa{grid-template-columns:1fr  .8fr}.capa-arte{min-height:390px}.anel-1{width:320px}.anel-2{width:400px}.fluxo-voz{flex-wrap:wrap}.etapa-voz{flex:1 1 28%}.seta-fluxo{display:none}.qr-secao{gap:35px}}
 @media(max-width:720px){html{scroll-padding-top:68px}.topo{height:64px;padding:0 18px}.nav-principal{display:none}.botao-modo{font-size:0;padding:9px 11px}.botao-modo span{font-size:15px}.secao{padding:82px 22px}.capa{display:flex;flex-direction:column;align-items:stretch;min-height:auto;padding-top:65px;padding-bottom:90px}.capa-texto{position:relative;z-index:2}.capa h1{font-size:clamp(54px,15vw,83px)}.capa-resumo{font-size:14px}.capa-arte{min-height:350px;margin-top:10px}.capa-arte svg{max-height:360px}.anel-1{width:280px}.anel-2{width:340px}.selo-arte{right:5%;top:4%}.indicador-rolagem{left:22px;bottom:24px}.capa-numeros{margin-top:40px;gap:24px}.cabecalho-secao{margin-bottom:35px}.cabecalho-secao h2,.qr-texto h2{font-size:clamp(39px,11vw,57px)}.texto-abertura{font-size:14px}.grade-tres,.duas-colunas,.cartilagens-layout,.comparacao-pregas,.camadas-layout,.nervos-layout,.mecanismo,.onda-mucosa,.qr-secao{grid-template-columns:1fr}.grade-tres{gap:10px}.cartao-funcao{min-height:190px}.duas-colunas{gap:25px;margin-top:45px}.mini-dados{gap:5px}.mini-dados div{padding:15px 7px}.mini-dados strong{font-size:19px}.mini-dados span{font-size:9px}.cartilagens-layout{gap:25px}.ilustracao-cartilagens{position:relative;top:auto}.chamada{align-items:flex-start;flex-direction:column;gap:6px}.regioes-ilustracao{padding:10px 0}.regioes-ilustracao svg{min-height:180px}.regioes-cards{grid-template-columns:1fr}.regiao-card{padding:20px}.camadas-layout{gap:25px}.musculos-principais{grid-template-columns:1fr}.musculo-card{min-height:175px}.nervos-layout{gap:10px}.fluxo-voz{display:grid;grid-template-columns:1fr 1fr;gap:10px}.etapa-voz{padding:16px}.etapa-voz:last-child{grid-column:1/-1}.etapa-voz h3{font-size:17px}.mecanismo{padding:22px;gap:20px}.onda-mucosa{gap:15px}.acustica-cards{grid-template-columns:1fr}.acustica-cards article{min-height:0}.acustica-cards p{min-height:0}.formantes{gap:25px}.alteracao{grid-template-columns:30px 1fr;gap:12px}.tipo-alteracao{grid-column:2;justify-self:start}.curiosidades-grade{grid-template-columns:1fr 1fr}.curiosidades-grade article{min-height:160px;padding:18px}.exames-lista{grid-template-columns:1fr}.passos-demo{grid-template-columns:1fr 1fr}.passos-demo article{padding:18px}.passos-demo h3{font-size:19px}.frase-final{margin:60px 0 0}.quiz{padding:23px 18px}.quiz h3{font-size:22px}.qr-secao{gap:35px}.qr-texto h2{font-size:48px}.qr-cartao{max-width:320px;margin:auto;width:100%}.rodape{gap:15px;flex-wrap:wrap}.rodape>span{order:3;width:100%;font-size:8px}.indice-lateral{display:none}.referencias{margin-top:65px}.modo-apresentacao .secao{padding-top:70px;padding-bottom:70px}.modo-apresentacao .capa{display:flex}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}.revelar{opacity:1;transform:none}}
+
+/* Expansão anatômica: arcabouço, conexões, doenças e preservação */
+.arcabouco-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:55px;align-items:center}
+.arcabouco-ilustracao{padding:24px;background:linear-gradient(145deg,#1c2821,#121a16);border:1px solid var(--linha);border-radius:5px;text-align:center}
+.arcabouco-ilustracao svg{width:100%;max-height:560px;display:block;margin:auto}
+.arcabouco-ilustracao small,.nota-tecnica{display:block;color:#aeb6a9;font-size:11px;line-height:1.7;margin-top:12px}
+.arcabouco-texto{display:grid;gap:14px}
+.arcabouco-texto article{position:relative;padding:22px 22px 20px 65px;border:1px solid var(--linha);background:rgba(255,255,255,.025)}
+.arcabouco-texto .numero-cartao{position:absolute;left:20px;top:22px;color:var(--laranja);font:12px var(--mono)}
+.arcabouco-texto h3,.ossificacao h3,.ligamentos-layout h3{font:700 21px var(--titulo);margin:0 0 8px;color:var(--creme)}
+.arcabouco-texto p,.ossificacao p,.ligamentos-layout p{font-size:13px;color:#c4c7bc;margin:0 0 8px}
+.arcabouco-texto small{font-size:11px;color:#9fbea8;line-height:1.6;display:block}
+.ossificacao{display:grid;grid-template-columns:.85fr 1.15fr;gap:45px;align-items:center;margin-top:70px;padding-top:40px;border-top:1px solid var(--linha)}
+.ossificacao-etapas{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ossificacao-etapas div{padding:18px 14px;background:#202c25;border:1px solid var(--linha);min-height:150px}
+.ossificacao-etapas b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--laranja);color:#20251f;font:700 12px var(--mono);margin-bottom:15px}
+.ossificacao-etapas strong,.ossificacao-etapas span{display:block}
+.ossificacao-etapas strong{font-size:12px;color:var(--creme);margin-bottom:6px}
+.ossificacao-etapas span{font-size:10px;color:#aeb6a9;line-height:1.5}
+.faixa-escura{background:#202b24;border-color:rgba(231,220,201,.14)}
+.conexoes-grade{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.conexoes-grade article{padding:28px;background:#f0e9dc;color:#29342c;border:1px solid #d7cdbb}
+.conexoes-grade article.regiao-central{background:#e5d4bd}
+.conexoes-grade .tag-regiao{color:#9b6848}
+.conexoes-grade h3{font:700 24px var(--titulo);margin:12px 0}
+.conexoes-grade p{font-size:13px;color:#555e54}
+.conexoes-grade small{font:10px var(--mono);color:#8d654b;text-transform:uppercase;letter-spacing:.04em}
+.ligamentos-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:55px;margin-top:65px;align-items:start}
+.ligamentos-lista{border-top:1px solid var(--linha)}
+.ligamentos-lista div{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px;padding:15px 0;border-bottom:1px solid var(--linha)}
+.ligamentos-lista b{font-size:12px;color:var(--creme)}
+.ligamentos-lista span{font-size:12px;color:#aeb6a9}
+.prevencao-grade{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.prevencao-grade article{padding:25px;background:#1d2922;border:1px solid var(--linha);min-height:205px}
+.prevencao-grade article>span{font:12px var(--mono);color:var(--laranja)}
+.prevencao-grade h3{font:700 19px var(--titulo);color:var(--creme);margin:20px 0 8px}
+.prevencao-grade p{font-size:12px;color:#b8c0b4;margin:0}
+.preservar-extra{margin-top:65px}
+.sinais-alerta{margin-top:55px;padding:28px 32px;background:#34251f;border:1px solid rgba(226,161,111,.42)}
+.sinais-alerta-titulo{display:flex;align-items:center;gap:15px}
+.sinais-alerta-titulo>span{width:38px;height:38px;display:grid;place-items:center;background:var(--laranja);color:#241e19;border-radius:50%;font:800 22px var(--titulo)}
+.sinais-alerta h3{font:700 23px var(--titulo);margin:0;color:#f3e8d7}
+.sinais-alerta .rotulo{margin:0;color:#e2a16f}
+.sinais-alerta ul{padding-left:20px;color:#e0d5c6;font-size:13px;display:grid;gap:8px;margin:22px 0}
+.sinais-alerta>p{font-size:11px;color:#c5b7a5;border-top:1px solid rgba(255,255,255,.12);padding-top:15px;margin:0}
+.fontes-lista{display:grid;grid-template-columns:1fr 1fr;gap:8px 30px;padding:0;list-style:none;margin:20px 0}
+.fontes-lista a{font-size:11px;color:#d7b28e;text-decoration:underline;text-underline-offset:3px}
+.fontes-lista a:hover{color:#fff}
+.nota-tecnica{margin-top:22px}
+@media(max-width:1000px){.arcabouco-layout,.ossificacao,.ligamentos-layout{grid-template-columns:1fr}.arcabouco-layout{gap:25px}.arcabouco-ilustracao{max-width:620px;margin:auto;width:100%}.ossificacao{gap:25px}.ligamentos-layout{gap:25px}}
+@media(max-width:720px){.arcabouco-layout,.conexoes-grade,.ligamentos-layout,.ossificacao{grid-template-columns:1fr}.arcabouco-ilustracao{padding:12px}.arcabouco-ilustracao svg{max-height:430px}.ossificacao-etapas{grid-template-columns:1fr}.ossificacao-etapas div{min-height:0}.conexoes-grade{gap:10px}.ligamentos-lista div{grid-template-columns:1fr;gap:4px}.prevencao-grade{grid-template-columns:1fr}.prevencao-grade article{min-height:0}.sinais-alerta{padding:22px 18px}.fontes-lista{grid-template-columns:1fr}.arcabouco-texto article{padding-left:55px}}
+
+/* ==========================================================
+   IDENTIDADE VISUAL — GRAU TÉCNICO | RADIOLOGIA
+   Paleta extraída da capa fornecida pelo autor do projeto.
+   ========================================================== */
+:root{
+  --fundo:#ffffff;
+  --fundo2:#f2f8f4;
+  --cartao:#ffffff;
+  --creme:#ffffff;
+  --texto:#183b29;
+  --suave:#526c5c;
+  --laranja:#fec000;
+  --laranja2:#e3aa00;
+  --verde:#00b151;
+  --linha:rgba(27,130,74,.18);
+  --fonte:'DM Sans',sans-serif;
+  --titulo:'Manrope',sans-serif;
+  --mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:#fff;color:#183b29}
+body:before{background:radial-gradient(circle at 84% 8%,rgba(0,177,81,.055),transparent 28%),linear-gradient(90deg,transparent 49.95%,rgba(27,130,74,.025) 50%,transparent 50.05%)}
+.barra-progresso{background:#e6f0e9}
+.barra-progresso span{background:#fec000}
+.topo{background:rgba(255,255,255,.94);border-bottom:1px solid #dcebe1;color:#155f38;box-shadow:0 5px 24px rgba(27,80,48,.045)}
+.marca{color:#155f38;gap:12px;letter-spacing:.1em}
+.marca i{color:#155f38}
+.marca-grau{display:block;width:94px;height:auto;max-height:42px;object-fit:contain}
+.marca-separador{height:27px;width:1px;background:#d5e5da;display:block}
+.nav-principal{color:#376c41}
+.nav-principal a:hover,.rodape a:hover{color:#155f38}
+.botao-destaque{background:#fec000;color:#183b29}
+.botao-destaque:hover{background:#ffd64c;color:#183b29}
+.botao-contorno{border-color:#b9d6c3;color:#155f38}
+.botao-contorno:hover{border-color:#155f38;color:#155f38;background:#eff9f2}
+.sobretitulo,.rotulo,.tempo-leitura,.grupo-titulo,.quiz-topo,.qr-cartao>strong{color:#155f38}
+.ponto-luz{background:#00b151;box-shadow:0 0 12px rgba(0,177,81,.45)}
+h1,h2,h3{color:inherit}
+h1 em,h2 em,.frase-final em,.encerramento h2 em{color:#155f38}
+.capa{background:linear-gradient(115deg,#f6fbf7 0%,#fff 58%,#edf8f1 100%);color:#183b29}
+.capa h1{color:#155f38}
+.capa h1 em{color:#155f38}
+.capa-resumo{color:#526c5c}
+.tempo-leitura{color:#376c41}
+.capa-numeros{border-color:#dcebe1}
+.capa-numeros strong{color:#155f38}
+.capa-numeros span{color:#607a69}
+.capa-arte{min-height:500px}
+.anel{border-color:rgba(0,177,81,.2)}
+.anel-2{border-color:rgba(27,130,74,.12)}
+.selo-arte{background:#fec000;color:#183b29}
+.legenda-arte{color:#526c5c}
+.indicador-rolagem{color:#526c5c}
+.indicador-rolagem span{background:#fec000}
+.indice-lateral .ponto{background:#b8d3c1}
+.indice-lateral .ponto.ativo{background:#00b151;box-shadow:0 0 0 5px rgba(0,177,81,.13)}
+.secao{background:#fff;color:#183b29}
+.secao-escura{background:#1b824a;color:#fff}
+.secao-escura .sobretitulo,.secao-escura .rotulo,.secao-escura .grupo-titulo{color:#ffd34b}
+.secao-escura .texto-abertura{color:#e4f2e8}
+.secao-escura h2,.secao-escura h3{color:#fff}
+.secao-escura h2 em,.secao-escura .frase-final em{color:#ffd34b}
+.introducao{background:#f2f8f4;color:#183b29}
+.introducao .texto-abertura{color:#526c5c}
+.introducao .sobretitulo,.introducao .rotulo{color:#155f38}
+.grade-tres{gap:16px}
+.cartao-funcao{background:#fff;border:1px solid #dcebe1;box-shadow:0 12px 30px rgba(27,80,48,.045);color:#183b29}
+.cartao-funcao.destaque-cartao{background:#1b824a;color:#fff;border-color:#155f38}
+.cartao-funcao p{color:#526c5c}
+.destaque-cartao p{color:#e4f2e8}
+.numero-cartao{color:#00a84d}
+.icone-funcao{color:#155f38}
+.destaque-cartao .icone-funcao{color:#ffd34b}
+.faixa-informativa{border-left-color:#fec000;background:#eaf5ee;color:#365b43}
+.faixa-informativa .faixa-simbolo{color:#155f38}
+.duas-colunas p:not(.rotulo){color:#526c5c}
+.mini-dados div{border-color:#dcebe1}
+.mini-dados strong{color:#155f38}
+.mini-dados span{color:#607a69}
+.cartilagens-layout{gap:48px}
+.ilustracao-cartilagens,.arcabouco-ilustracao,.regioes-ilustracao,.camadas-desenho{background:#edf6f0;border:1px solid #d7e8dc;border-radius:14px;padding:18px;box-shadow:0 14px 34px rgba(27,80,48,.055)}
+.ilustracao-cartilagens .nota-ilustracao,.arcabouco-ilustracao small{color:#526c5c}
+.item-cartilagem{border-color:rgba(255,255,255,.22)}
+.item-cartilagem h3{color:#fff}
+.item-cartilagem p{color:#e1f0e6}
+.item-cartilagem h3 small,.item-cartilagem div>small{color:#ffd34b}
+.sigla{border-color:rgba(255,211,75,.55);color:#ffd34b}
+.grupo-titulo{border-color:rgba(255,255,255,.28)}
+.grupo-titulo b{color:#fff}
+.chamada{background:#145f37;color:#fff;border-left:4px solid #fec000}
+.chamada strong{color:#ffd34b}
+.arcabouco-layout{align-items:start}
+.arcabouco-texto article{background:#176d3e;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:22px;margin-bottom:12px}
+.arcabouco-texto article h3{color:#fff}
+.arcabouco-texto p,.arcabouco-texto small{color:#e4f2e8}
+.ossificacao{border-color:rgba(255,255,255,.22)}
+.ossificacao p{color:#e4f2e8}
+.ossificacao-etapas div{background:#176d3e;border-color:rgba(255,255,255,.18);border-radius:10px}
+.ossificacao-etapas b{background:#fec000;color:#183b29}
+.ossificacao-etapas strong{color:#fff}
+.ossificacao-etapas span{color:#dcefe3}
+.faixa-escura{background:#155f38;border-color:rgba(255,255,255,.18);color:#e5f2e8}
+.faixa-escura .faixa-simbolo{color:#ffd34b}
+.nota-tecnica{color:#d6ebdc}
+.conexoes-grade article{background:#f2f8f4;color:#183b29;border-color:#dcebe1;border-radius:12px}
+.conexoes-grade article.regiao-central{background:#e4f3e9}
+.conexoes-grade .tag-regiao{color:#155f38}
+.conexoes-grade h3{color:#155f38}
+.conexoes-grade p{color:#526c5c}
+.conexoes-grade small{color:#376c41}
+.ligamentos-lista b{color:#155f38}
+.ligamentos-lista span{color:#526c5c}
+.regioes-cards .regiao-card{background:#edf6f0;color:#183b29;border:1px solid #dcebe1;border-radius:12px}
+.regioes-cards .regiao-central{background:#fff5cf}
+.regiao-card h3{color:#155f38}
+.regiao-card p{color:#526c5c}
+.tag-regiao{color:#155f38}
+.painel-prega{background:#f2f8f4;border:1px solid #dcebe1;border-radius:12px;color:#183b29}
+.painel-prega .rotulo{color:#155f38}
+.painel-prega p:last-child{color:#526c5c}
+.camadas-texto h3,.camadas-texto{color:#fff}
+.lista-camadas b{color:#ffd34b}
+.lista-camadas span{color:#e4f2e8}
+.musculo-card{background:#f2f8f4;border:1px solid #dcebe1;color:#183b29;border-radius:12px}
+.musculo-card h3{color:#155f38}
+.musculo-card p{color:#526c5c}
+.acao-musculo{color:#155f38}
+.nervo-card{background:#f2f8f4;color:#183b29;border:1px solid #dcebe1;border-radius:12px}
+.nervo-card h3{color:#155f38}
+.nervo-card .rotulo{color:#155f38}
+.nervo-card .ramo-nervo b{color:#155f38}
+.nervo-card .ramo-nervo span{color:#526c5c}
+.nervo-destaque{background:#e7f5eb}
+.curiosidade-nervo{background:#eaf5ee;color:#365b43;border-left:4px solid #fec000}
+.lista-alteracoes{border-color:#dcebe1}
+.alteracao{color:#183b29;border-color:#dcebe1}
+.alteracao h3{color:#155f38}
+.alteracao p{color:#526c5c}
+.alteracao-num{color:#155f38}
+.tipo-alteracao{color:#376c41;border-color:#b9d6c3}
+.alerta-clinico{background:#fff5cf;color:#5b4a16;border-left:4px solid #fec000;border-radius:10px}
+.alerta-clinico p{color:#5b4a16}
+.prevencao-grade article{background:#176d3e;border:1px solid rgba(255,255,255,.18);border-radius:12px}
+.prevencao-grade article>span{color:#ffd34b}
+.prevencao-grade h3{color:#fff}
+.prevencao-grade p{color:#e4f2e8}
+.sinais-alerta{background:#fff5cf;border:1px solid #f0d87c;border-radius:12px;color:#5b4a16}
+.sinais-alerta h3{color:#183b29}
+.sinais-alerta .rotulo{color:#155f38}
+.sinais-alerta ul,.sinais-alerta>p{color:#5b4a16}
+.sinais-alerta-titulo>span{background:#fec000;color:#183b29}
+.fluxo-voz .etapa-voz{background:#f2f8f4;border:1px solid #dcebe1;border-radius:12px;color:#183b29}
+.etapa-voz h3{color:#155f38}
+.etapa-voz p{color:#526c5c}
+.etapa-voz.etapa-foco{background:#1b824a;color:#fff}
+.etapa-foco h3,.etapa-foco p{color:#fff}
+.mecanismo{background:#f2f8f4;border:1px solid #dcebe1;border-radius:12px}
+.mecanismo-texto h3{color:#155f38}
+.mecanismo-texto p{color:#526c5c}
+.mecanismo-destaque{background:#1b824a;color:#fff;border-radius:10px}
+.mecanismo-destaque strong{color:#ffd34b}
+.formantes h3{color:#155f38}
+.formantes p:not(.rotulo){color:#526c5c}
+.formantes-caixa span{background:#e7f5eb;color:#155f38;border:1px solid #dcebe1}
+.formantes-caixa small{color:#526c5c}
+.curiosidades-grade{border-color:#dcebe1;background:#dcebe1}
+.curiosidades-grade article{background:#f2f8f4;color:#183b29}
+.curiosidades-grade article>span{color:#155f38}
+.curiosidades-grade h3{color:#155f38}
+.curiosidades-grade p{color:#526c5c}
+.exames-lista b{color:#155f38}
+.exames-lista span{color:#526c5c}
+.demonstracao{background:#f2f8f4;color:#183b29}
+.demonstracao .texto-abertura{color:#526c5c}
+.demonstracao .sobretitulo{color:#155f38}
+.passos-demo article{background:#fff;border:1px solid #dcebe1;border-top:3px solid #fec000;border-radius:10px}
+.passos-demo article>span{color:#155f38}
+.passos-demo h3{color:#155f38}
+.passos-demo p{color:#526c5c}
+.frase-final{color:#155f38}
+.frase-final em{color:#155f38}
+.revisao{background:#fff;color:#183b29}
+.revisao .sobretitulo{color:#155f38}
+.revisao .texto-abertura{color:#526c5c}
+.quiz{background:#1b824a;color:#fff;border:1px solid #176d3e;border-radius:16px;box-shadow:0 25px 60px rgba(27,80,48,.15)}
+.quiz-topo{color:#ffd34b}
+.quiz-progresso{background:rgba(255,255,255,.22)}
+.quiz-progresso span{background:#fec000}
+.quiz h3{color:#fff}
+.opcao{border-color:rgba(255,255,255,.28);color:#fff;border-radius:9px}
+.opcao:hover,.opcao.selecionada{border-color:#fec000;background:rgba(254,192,0,.12)}
+.letra-opcao{border-color:rgba(255,255,255,.35);color:#ffd34b}
+.opcao.correta{border-color:#9be0b3;background:rgba(0,177,81,.22)}
+.opcao.incorreta{border-color:#ffd0c4;background:rgba(200,55,35,.18)}
+.explicacao{background:rgba(255,255,255,.12);color:#f0f8f2;border-radius:8px}
+.resultado-final strong{color:#ffd34b}
+.encerramento{background:#1b824a;color:#fff}
+.encerramento h2{color:#fff}
+.encerramento h2 em{color:#ffd34b}
+.encerramento-miolo>p:not(.sobretitulo){color:#e4f2e8}
+.encerramento .sobretitulo{color:#ffd34b}
+.referencias{border-color:rgba(255,255,255,.25)}
+.referencias p:not(.rotulo){color:#e4f2e8}
+.referencias .rotulo{color:#ffd34b}
+.fontes-lista a{color:#fff0b3}
+.fontes-lista a:hover{color:#fff}
+.qr-secao{background:#f2f8f4;color:#183b29}
+.qr-texto .sobretitulo{color:#155f38}
+.qr-texto h2{color:#155f38}
+.qr-texto h2 em{color:#155f38}
+.qr-texto>p:not(.sobretitulo){color:#526c5c}
+.qr-texto label{color:#183b29}
+.campo-url input{border-color:#c8dfd0;background:#fff;color:#183b29}
+.campo-url input:focus{border-color:#155f38}
+.campo-url button,.qr-cartao button{background:#1b824a;color:#fff}
+.campo-url button:hover,.qr-cartao button:hover{background:#00a84d}
+.qr-cartao{background:#fff;border:1px solid #dcebe1;border-radius:14px;box-shadow:0 20px 50px rgba(27,80,48,.08)}
+.qr-cartao>strong{color:#155f38}
+.qr-cartao>small{color:#526c5c}
+.rodape{background:#155f38;border-color:#155f38;color:#e4f2e8}
+.rodape .marca{color:#fff}
+.rodape .marca i{color:#ffd34b}
+.rodape .marca-separador{background:rgba(255,255,255,.35)}
+.aviso{background:#fec000;color:#183b29;border-radius:8px}
+
+/* Fotografias anatômicas e clínicas: todas as legendas foram redigidas em português brasileiro. */
+.foto-figura{margin:0;background:#fff;border:1px solid #dcebe1;border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(27,80,48,.065);color:#183b29}
+.foto-moldura{position:relative;overflow:hidden;background:#e8f2eb;aspect-ratio:4/3}
+.foto-moldura img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.foto-figura figcaption{padding:17px 18px 18px}
+.foto-figura figcaption strong{display:block;font:800 15px var(--titulo);color:#155f38;margin-bottom:6px}
+.foto-figura figcaption p{font-size:12px;line-height:1.65;color:#526c5c;margin:0 0 9px}
+.foto-figura figcaption small,.foto-fase small{display:block;font-size:9px;line-height:1.6;color:#6b8172}
+.foto-figura figcaption a,.foto-fase a{color:#155f38;text-decoration:underline;text-underline-offset:2px}
+.foto-capa{max-width:470px;width:100%;position:relative;z-index:2;background:#fff}
+.foto-capa .foto-moldura{aspect-ratio:.72}
+.foto-corte-esquerda .foto-moldura{aspect-ratio:.67}
+.foto-corte-esquerda .foto-moldura img{width:200%;height:auto;max-width:none;object-fit:initial;object-position:left top}
+.capa-arte .foto-figura{box-shadow:0 28px 65px rgba(27,80,48,.18);border:5px solid #fff}
+.capa-arte .foto-figura figcaption{padding:12px 15px}
+.capa-arte .foto-figura figcaption strong{font-size:13px}
+.capa-arte .foto-figura figcaption p{font-size:10px;margin-bottom:5px}
+.capa-arte .foto-figura figcaption small{font-size:8px}
+.ilustracao-cartilagens .foto-figura,.arcabouco-ilustracao .foto-figura{box-shadow:none}
+.ilustracao-cartilagens .foto-figura figcaption,.arcabouco-ilustracao .foto-figura figcaption{padding:14px 5px 3px}
+.regioes-ilustracao .foto-moldura{aspect-ratio:4/3}
+.regioes-ilustracao .foto-figura{box-shadow:none}
+.regioes-ilustracao .foto-figura figcaption{padding:14px 6px 5px}
+.legenda-numerada{display:grid;grid-template-columns:1fr 1fr;gap:5px 18px;margin:12px 0 13px;padding-left:20px;color:#365b43;font-size:11px}
+.legenda-numerada b{color:#155f38}
+.foto-fase{background:#f2f8f4;border:1px solid #dcebe1;border-radius:12px;overflow:hidden;padding:12px;color:#183b29}
+.foto-fase-recorte{position:relative;overflow:hidden;aspect-ratio:1.04;border-radius:8px;background:#e8f2eb}
+.foto-fase-recorte img{position:absolute;right:0;top:0;width:400%;height:auto;max-width:none;display:block}
+.foto-fase-fonacao .foto-fase-recorte img{top:-200%}
+.foto-fase p{font-size:12px;color:#526c5c;line-height:1.65;margin:12px 2px 7px}
+.foto-fase p strong{color:#155f38}
+.foto-fase small{padding:0 2px}
+.foto-faixa .foto-moldura{aspect-ratio:3.2}
+.foto-faixa .foto-moldura img{object-fit:contain;background:#fff}
+.galeria-clinica{margin-top:48px;padding:30px;background:#edf6f0;border:1px solid #dcebe1;border-radius:16px}
+.galeria-cabecalho{max-width:720px;margin-bottom:22px}
+.galeria-cabecalho .rotulo{color:#155f38}
+.galeria-cabecalho h3{font-size:clamp(25px,3vw,36px);color:#155f38;margin:9px 0}
+.galeria-cabecalho p:last-child{font-size:13px;color:#526c5c;margin:0}
+.galeria-fotos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.galeria-fotos .foto-moldura{aspect-ratio:4/3}
+.nota-fotografias{font-size:10px;color:#526c5c;margin:16px 0 0}
+
+@media(max-width:1000px){
+  .galeria-fotos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .capa-arte .foto-capa{max-width:390px}
+}
+@media(max-width:720px){
+  .topo{height:66px;padding:0 16px}
+  .marca-grau{width:76px;max-height:34px}
+  .marca{font-size:10px;gap:8px}
+  .nav-principal{display:none}
+  .foto-capa{max-width:310px}
+  .capa-arte{min-height:380px}
+  .foto-capa .foto-moldura{aspect-ratio:.9}
+  .foto-corte-esquerda .foto-moldura{aspect-ratio:.8}
+  .galeria-clinica{padding:18px;margin-top:32px}
+  .galeria-fotos{grid-template-columns:1fr}
+  .legenda-numerada{grid-template-columns:1fr 1fr;font-size:10px;gap:5px 12px}
+  .foto-fase-recorte{aspect-ratio:1.1}
+  .rodape{gap:14px;flex-wrap:wrap}
+  .rodape>span{order:3;width:100%}
+}
+.etiquetas-foto{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 12px}
+.etiquetas-foto span{display:inline-flex;align-items:center;padding:5px 8px;border-radius:999px;background:#e7f5eb;color:#155f38;font:600 9px var(--fonte);border:1px solid #cfe5d6}
+.rodape .marca-grau{background:#fff;border-radius:4px;padding:3px 5px}
+.topo{border-top:4px solid #39A670}
+.capa{background:linear-gradient(115deg,rgba(57,166,112,.10) 0%,#fff 54%,rgba(0,177,81,.055) 100%)}
+.ponto-luz{background:#39A670;box-shadow:0 0 12px rgba(57,166,112,.45)}
+
+/* ==========================================================
+   VERSÃO 4.0 — EXPERIÊNCIA ADAPTATIVA E FOTOGRAFIAS ANOTADAS
+   As identificações abaixo ficam SOBRE as fotografias, em PT-BR.
+   ========================================================== */
+.botao-menu-mobile{display:none;align-items:center;justify-content:center;flex-direction:column;gap:4px;width:40px;height:40px;padding:8px;border:1px solid #b9d6c3;border-radius:5px;background:#fff;cursor:pointer}
+.botao-menu-mobile span{display:block;width:17px;height:2px;border-radius:2px;background:#1b824a;transition:transform .2s,opacity .2s}
+.botao-menu-mobile[aria-expanded="true"] span:first-child{transform:translateY(6px) rotate(45deg)}
+.botao-menu-mobile[aria-expanded="true"] span:nth-child(2){opacity:0}
+.botao-menu-mobile[aria-expanded="true"] span:last-child{transform:translateY(-6px) rotate(-45deg)}
+.menu-mobile{display:none}
+.menu-mobile[hidden]{display:none!important}
+.identificacao-plataforma{color:#155f38;font:500 9px var(--mono);letter-spacing:.03em}
+.foto-moldura.foto-anotada{position:relative;isolation:isolate;background:#173d2a;overflow:hidden}
+.foto-anotada img{position:relative;z-index:0;width:100%;height:100%;max-width:100%;object-fit:cover;object-position:center}
+.foto-corte-esquerda .foto-moldura.foto-anotada img{width:100%;height:100%;max-width:100%;object-fit:cover;object-position:center}
+.foto-anotada-interna{aspect-ratio:1/1!important}
+.foto-anotada-externa{aspect-ratio:.76!important}
+.foto-anotada-posterior{aspect-ratio:.76!important}
+.foto-anotada-endoscopia{aspect-ratio:4/3!important}
+.foto-anotada-clinica{aspect-ratio:4/3!important}
+.pino-foto{position:absolute;z-index:3;left:var(--x);top:var(--y);transform:translate(-50%,-50%);width:25px;height:25px;display:grid;place-items:center;border:2px solid #fff;border-radius:50%;background:#fec000;color:#183b29;box-shadow:0 2px 12px rgba(0,0,0,.38);font:800 11px var(--mono);text-shadow:none}
+.legenda-sobre-foto{position:absolute;z-index:4;left:9px;right:9px;bottom:9px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 7px;padding:9px 10px;border:1px solid rgba(255,255,255,.3);border-left:3px solid #fec000;border-radius:8px;background:rgba(20,72,42,.92);color:#fff;box-shadow:0 5px 22px rgba(0,0,0,.22);backdrop-filter:blur(7px);font:600 9px/1.35 var(--fonte);text-align:left}
+.legenda-sobre-foto span{min-width:0;overflow-wrap:anywhere}
+.legenda-sobre-foto b{display:inline-grid;place-items:center;width:16px;height:16px;margin-right:4px;border-radius:50%;background:#fec000;color:#183b29;font:800 8px var(--mono);vertical-align:middle}
+.legenda-endoscopia{grid-template-columns:repeat(2,minmax(0,1fr));font-size:8px;gap:4px 6px}
+.faixa-identificacao{position:absolute;z-index:4;top:9px;left:9px;right:9px;padding:7px 9px;border-left:3px solid #fec000;border-radius:4px;background:rgba(20,72,42,.93);color:#fff;font:700 9px/1.3 var(--mono);letter-spacing:.04em;text-align:left;box-shadow:0 4px 15px rgba(0,0,0,.2)}
+.foto-fase-recorte{position:relative}
+.selo-foto{position:absolute;z-index:3;top:8px;left:8px;max-width:calc(100% - 16px);padding:6px 8px;border-left:3px solid #fec000;border-radius:4px;background:rgba(20,72,42,.94);color:#fff;font:700 8px/1.3 var(--mono);letter-spacing:.04em}
+.selo-foto-secundario{top:auto;left:auto;right:8px;bottom:8px;border-left:0;border-right:3px solid #fec000;text-align:right}
+
+@media(max-width:860px){
+  .topo{position:sticky;overflow:visible;gap:10px}
+  .nav-principal{display:none}
+  .botao-menu-mobile{display:inline-flex;margin-left:auto;flex:0 0 40px}
+  .menu-mobile:not([hidden]){position:absolute;top:100%;left:0;right:0;z-index:80;display:grid;gap:0;padding:8px 16px 14px;background:rgba(255,255,255,.98);border-bottom:1px solid #cfe5d6;box-shadow:0 14px 26px rgba(24,59,41,.13);backdrop-filter:blur(16px)}
+  .menu-mobile a{padding:13px 12px;border-bottom:1px solid #e5f0e8;color:#155f38;font-size:13px;font-weight:700}
+  .menu-mobile a:last-child{border-bottom:0}
+  .identificacao-plataforma{font-size:8px}
+}
+@media(max-width:720px){
+  .topo{height:66px;padding:0 13px;gap:8px}
+  .marca-grau{width:70px;max-height:32px}
+  .marca{font-size:9px;gap:7px;letter-spacing:.07em}
+  .marca-separador{height:22px}
+  .botao-menu-mobile{width:36px;height:36px;flex-basis:36px;margin-left:auto}
+  .botao-modo{width:36px;height:36px;min-width:36px;padding:8px;margin-left:0}
+  .foto-anotada-interna{aspect-ratio:1/1!important}
+  .foto-anotada-externa,.foto-anotada-posterior{aspect-ratio:.78!important}
+  .foto-anotada .legenda-sobre-foto{left:6px;right:6px;bottom:6px;padding:7px 7px;gap:4px 5px;font-size:8px}
+  .legenda-endoscopia{grid-template-columns:1fr 1fr;font-size:7px}
+  .pino-foto{width:22px;height:22px;font-size:9px}
+  .faixa-identificacao{top:6px;left:6px;right:6px;font-size:8px;padding:6px 7px}
+  .selo-foto{top:6px;left:6px;font-size:7px;padding:5px 6px}
+  .selo-foto-secundario{top:auto;left:auto;right:6px;bottom:6px}
+  .identificacao-plataforma{width:100%;order:4;font-size:8px}
+  .rodape{justify-content:center;text-align:center}
+}
+@media(max-width:360px){
+  .marca-grau{width:62px}
+  .marca{font-size:8px;gap:5px}
+  .botao-menu-mobile,.botao-modo{width:33px;height:33px;min-width:33px;flex-basis:33px}
+  .foto-anotada .legenda-sobre-foto{font-size:7px;padding:6px}
+  .legenda-sobre-foto b{width:14px;height:14px;font-size:7px}
+}
+@media(hover:none){.botao,.botao-menu-mobile,.menu-mobile a,.opcao{touch-action:manipulation}}
+.foto-especime{max-width:760px;margin:36px auto 0}
+.foto-anotada-especime{aspect-ratio:1.55!important}
+.foto-anotada-especime img{transform:scale(1.34);transform-origin:50% 18%;object-position:center top}
+.foto-anotada-especime .legenda-sobre-foto{grid-template-columns:1fr}
+@media(max-width:720px){.foto-anotada-especime{aspect-ratio:1.15!important}.foto-anotada-especime img{transform:scale(1.42);transform-origin:50% 18%}}
+
+/* ==========================================================
+   VERSÃO 5.0 — CONTRASTE, FOTOGRAFIAS LOCAIS E LEITURA MOBILE
+   ========================================================== */
+.capa h1 em{color:#155f38}
+.painel-prega .rotulo{color:#ffd34b}
+.secao-escura .item-cartilagem div>small{color:#f0f7f2}
+.rodape .identificacao-plataforma{color:#fff}
+.foto-fase-recorte{aspect-ratio:1/1;display:block;background:#102b1c}
+.foto-fase-recorte img{position:static;display:block;width:100%;height:100%;max-width:100%;object-fit:cover;object-position:center}
+.foto-fase-fonacao .foto-fase-recorte img{top:auto}
+.foto-fase .selo-foto{display:none}
+.legenda-sobre-foto{color:#fff;background:rgba(17,48,30,.96)}
+.faixa-identificacao{color:#fff;background:rgba(17,48,30,.96)}
+.pino-foto{color:#173d2a;background:#fec000}
+
+@media(max-width:720px){
+  .foto-fase-recorte{aspect-ratio:1/1}
+  .foto-fase-recorte img{object-fit:cover}
+  .rodape .identificacao-plataforma{color:#fff}
+}
+
+/* Contraste AA reforçado nas seções institucionais verdes. */
+.secao-escura .sobretitulo,
+.secao-escura .rotulo,
+.secao-escura .grupo-titulo,
+.secao-escura .grupo-titulo b,
+.secao-escura .texto-abertura,
+.secao-escura .item-cartilagem p,
+.secao-escura .item-cartilagem div>small,
+.secao-escura .item-cartilagem h3 small,
+.secao-escura .sigla{color:#fff}
+.secao-escura .sigla{border-color:rgba(255,255,255,.7)}
+.secao-escura .painel-prega .rotulo{color:#ffd34b}
+.secao-escura .lista-camadas b,
+.secao-escura .lista-camadas span,
+.secao-escura .mecanismo-texto h3,
+.secao-escura .mecanismo-texto p,
+.secao-escura .formantes h3,
+.secao-escura .formantes p:not(.rotulo),
+.secao-escura .formantes-caixa small,
+.secao-escura .exames-lista b,
+.secao-escura .exames-lista span,
+.secao-escura .duas-colunas p:not(.rotulo){color:#fff}
+
+/* ==========================================================
+   REFINAMENTO VISUAL — FOTOGRAFIAS INTEIRAS, SEM CORTES
+   Paleta Grau Técnico: verde + amarelo, com contraste reforçado.
+   ========================================================== */
+:root{
+  --laranja:#FEC000;
+  --laranja2:#1B824A;
+  --verde:#39A670;
+  --linha:rgba(220,239,226,.16);
+}
+.topo{border-bottom-color:rgba(57,166,112,.32)}
+.barra-progresso span,.ponto.ativo,.indicador-rolagem span{background:#FEC000}
+.botao-destaque{background:#FEC000;color:#173d2a}
+.botao-destaque:hover{background:#ffda55}
+.selo-arte{background:#1B824A;color:#fff;border:1px solid rgba(255,255,255,.22)}
+.capa h1 em,h1 em,h2 em,.frase-final em,.encerramento h2 em{color:#39A670}
+
+/* Imagens anotadas: mostrar a fotografia completa e preservar os rótulos. */
+.foto-capa .foto-moldura.foto-anotada,
+.foto-corte-esquerda .foto-moldura.foto-anotada,
+.foto-anotada-interna,.foto-anotada-externa,.foto-anotada-posterior{
+  height:auto!important;
+  aspect-ratio:auto!important;
+  background:#102b1c;
+}
+.foto-moldura.foto-anotada img,
+.foto-corte-esquerda .foto-moldura.foto-anotada img,
+.foto-anotada-interna img,.foto-anotada-externa img,.foto-anotada-posterior img{
+  display:block;
+  position:relative;
+  width:100%!important;
+  height:auto!important;
+  max-width:100%;
+  max-height:none;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:none!important;
+}
+.foto-capa{width:min(100%,480px);margin-inline:auto}
+.capa-arte .foto-capa{border:4px solid #fff;border-radius:18px;overflow:hidden}
+.foto-capa figcaption{background:#fff}
+.ilustracao-cartilagens,.arcabouco-ilustracao,.regioes-ilustracao{
+  border-radius:16px;
+  overflow:hidden;
+}
+.foto-figura{border-radius:14px;overflow:hidden}
+.foto-figura figcaption{padding:16px 18px 18px}
+.foto-figura figcaption small{overflow-wrap:anywhere}
+
+/* Endoscopia e fotografias clínicas mantêm proporção consistente. */
+.foto-anotada-endoscopia,.foto-anotada-clinica{
+  aspect-ratio:4/3!important;
+  background:#102b1c;
+}
+.foto-anotada-endoscopia img,.foto-anotada-clinica img{
+  width:100%!important;height:100%!important;object-fit:contain!important;
+}
+.foto-faixa .foto-moldura{aspect-ratio:3.2!important;background:#102b1c}
+.foto-faixa .foto-moldura img{object-fit:contain!important}
+
+/* Inspiração × fonação: não cortar o rodapé/identificação que já está na foto. */
+.foto-fase-recorte{
+  height:auto!important;
+  aspect-ratio:auto!important;
+  background:#102b1c;
+  border-radius:12px;
+  overflow:hidden;
+}
+.foto-fase-recorte img{
+  position:static!important;
+  display:block;
+  width:100%!important;
+  height:auto!important;
+  max-width:100%;
+  object-fit:contain!important;
+  transform:none!important;
+}
+.foto-fase{min-width:0}
+.foto-fase p{margin-top:14px}
+
+/* Melhor equilíbrio das colunas e respiro ao redor das imagens. */
+.cartilagens-layout,.arcabouco-layout{gap:clamp(24px,4vw,58px)}
+.ilustracao-cartilagens{top:96px;padding:18px}
+.regioes-ilustracao{padding:clamp(12px,2vw,24px)}
+.regioes-ilustracao .foto-figura{max-width:900px;margin-inline:auto}
+.galeria-fotos{align-items:start;gap:18px}
+.galeria-fotos .foto-figura{height:100%}
+.galeria-fotos .foto-moldura{height:auto;aspect-ratio:4/3}
+.galeria-fotos .foto-moldura img{object-fit:contain!important}
+
+@media(max-width:720px){
+  .capa-arte{min-height:0!important;padding:18px 8px 24px}
+  .capa-arte .foto-capa{width:min(100%,430px);max-width:100%}
+  .anel-1,.anel-2{max-width:90vw}
+  .foto-anotada-endoscopia,.foto-anotada-clinica{aspect-ratio:4/3!important}
+  .foto-anotada-endoscopia img,.foto-anotada-clinica img{height:100%!important}
+  .foto-fase-recorte{width:100%}
+  .foto-fase-recorte img{height:auto!important}
+  .ilustracao-cartilagens{position:relative;top:auto}
+  .galeria-fotos{grid-template-columns:1fr;gap:16px}
+  .galeria-fotos .foto-moldura{aspect-ratio:auto}
+  .galeria-fotos .foto-moldura img{height:auto!important}
+}
+
+
+/* Visualizador de imagens em tela ampliada */
+.imagem-clicavel{cursor:zoom-in;-webkit-tap-highlight-color:transparent}
+.imagem-clicavel:focus-visible{outline:3px solid #fec000;outline-offset:4px}
+.visualizador-foto{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:clamp(10px,2.5vw,30px);background:rgba(5,12,8,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);overflow-y:auto}
+.visualizador-foto.aberto{display:flex}
+.visualizador-painel{position:relative;width:min(100%,1500px);min-height:min-content;display:flex;flex-direction:column;align-items:center;gap:12px;margin:auto;padding:48px 8px 12px}
+.visualizador-fechar{position:fixed;top:max(12px,env(safe-area-inset-top));right:max(14px,env(safe-area-inset-right));z-index:2;width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:#1b824a;color:#fff;font:300 32px/1 Arial,sans-serif;cursor:pointer;box-shadow:0 5px 22px rgba(0,0,0,.35)}
+.visualizador-fechar:hover{background:#00a852}
+.visualizador-conteudo{width:100%;display:flex;justify-content:center;align-items:center}
+.visualizador-imagem{display:block;width:auto;height:auto;max-width:min(100%,1400px);max-height:calc(100dvh - 150px);object-fit:contain;border-radius:5px;box-shadow:0 18px 65px rgba(0,0,0,.45);background:#101713}
+.visualizador-legenda{max-width:900px;margin:0;color:#fff;text-align:center;font:600 14px/1.5 var(--fonte,sans-serif)}
+.visualizador-ajuda{color:rgba(255,255,255,.62);text-align:center;font:10px/1.4 var(--mono,monospace);letter-spacing:.04em}
+body.imagem-ampliada-aberta{overflow:hidden}
+@media(max-width:600px){.visualizador-foto{padding:8px}.visualizador-painel{padding-top:54px;gap:10px}.visualizador-imagem{max-width:100%;max-height:calc(100dvh - 145px);border-radius:3px}.visualizador-fechar{width:42px;height:42px}.visualizador-legenda{font-size:12px;padding-inline:8px}.visualizador-ajuda{font-size:9px}}

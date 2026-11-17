@@ -1,0 +1,2 @@
+As fotografias finais são geradas nesta pasta quando você executa PREPARAR-IMAGENS.bat na raiz do projeto.
+O pacote preparador ainda não contém os arquivos binários das fotografias; o script baixa, recorta, grava as legendas em PT-BR e gera o ZIP final para o GitHub Pages.
